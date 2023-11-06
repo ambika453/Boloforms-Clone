@@ -13,7 +13,7 @@ const Home = () => {
     const setup = async() => {
         setLoading(true)
         try{
-          const res = await fetch(`https://boloforms-clone-bakend.vercel.app/${uid}/get`, {
+          const res = await fetch(`https://boloforms-clone-bakend.vercel.app/hser/${uid}/get`, {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',
