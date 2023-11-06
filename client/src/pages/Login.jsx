@@ -13,7 +13,7 @@ const Login = () => {
     const handleSignin = async() => {
         setLoading(true)
         try{
-        const usersResponse = await fetch('http://localhost:8080/users/get', {
+        const usersResponse = await fetch('https://boloforms-clone-bakend.vercel.app/user/get', {
             method: 'GET',
             headers: {
             'Content-Type': 'application/json',
