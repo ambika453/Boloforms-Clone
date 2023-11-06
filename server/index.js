@@ -8,7 +8,11 @@ import user_router from "./routes/user.js";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: ['https://boloforms-quiz.vercel.app'],
+    methods: ['POST','GET','PUT','DELETE'],
+    credentials: true
+}));
 app.use(express.json({limit:"50mb"}));
 
 app.use('/users', user_router);
