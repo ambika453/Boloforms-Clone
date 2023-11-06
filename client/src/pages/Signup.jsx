@@ -7,16 +7,9 @@ const Signup = () => {
             fname: '',
             lname: '',
             email: '',
-            number: 0,
-            area1: '',
-            area2: '',
-            county: '',
-            city: '',
-            state: '',
-            pincode: 0,
             password: '',
-            bookmarks: [],
-            carts: []
+            forms: [],
+            responses: []
     })
     const navigate = useNavigate()
 
@@ -27,7 +20,7 @@ const Signup = () => {
     const handleSignup = async() => {
         setLoading(true)
         try{
-        const userResponse = await fetch('http://localhost:8080/users/post', {
+        const userResponse = await fetch('https://boloforms-clone-bakend.vercel.app/users/post', {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json',
