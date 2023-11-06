@@ -19,7 +19,7 @@ const Responses = () => {
   const setup = async() => {
     setLoading(true)
     try{
-      const res = await fetch(`http://localhost:8080/users/${uid}/get`, {
+      const res = await fetch(`https://boloforms-clone-bakend.vercel.app/users/${uid}/get`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
