@@ -16,7 +16,7 @@ const FormPreview = () => {
   const setup = async() => {
     setLoading(true)
     try{
-      const res = await fetch(`http://localhost:8080/users/${uid}/get`, {
+      const res = await fetch(`https://boloforms-clone-bakend.vercel.app/users/${uid}/get`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ const FormPreview = () => {
     let updatedUser = {...user}
     updatedUser = {...updatedUser, responses:[...updatedUser.responses, {form_id: fid, email:user.email, response:preview}]}
     try{
-      const res = await fetch(`http://localhost:8080/users/${uid}/update`, {
+      const res = await fetch(`https://boloforms-clone-bakend.vercel.app/users/${uid}/update`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
